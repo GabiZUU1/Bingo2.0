@@ -38,35 +38,15 @@
             this.pnlLetters.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lbl5
+            // lbl1
             // 
-            this.lbl5.Font = new System.Drawing.Font("Franklin Gothic Heavy", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl5.Location = new System.Drawing.Point(384, 0);
-            this.lbl5.Name = "lbl5";
-            this.lbl5.Size = new System.Drawing.Size(96, 75);
-            this.lbl5.TabIndex = 9;
-            this.lbl5.Text = "O";
-            this.lbl5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl4
-            // 
-            this.lbl4.Font = new System.Drawing.Font("Franklin Gothic Heavy", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl4.Location = new System.Drawing.Point(288, 0);
-            this.lbl4.Name = "lbl4";
-            this.lbl4.Size = new System.Drawing.Size(96, 75);
-            this.lbl4.TabIndex = 8;
-            this.lbl4.Text = "G";
-            this.lbl4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl3
-            // 
-            this.lbl3.Font = new System.Drawing.Font("Franklin Gothic Heavy", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl3.Location = new System.Drawing.Point(192, 0);
-            this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(96, 75);
-            this.lbl3.TabIndex = 7;
-            this.lbl3.Text = "N";
-            this.lbl3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1.Font = new System.Drawing.Font("Franklin Gothic Heavy", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.Location = new System.Drawing.Point(0, 0);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(96, 75);
+            this.lbl1.TabIndex = 5;
+            this.lbl1.Text = "B";
+            this.lbl1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl2
             // 
@@ -78,15 +58,35 @@
             this.lbl2.Text = "I";
             this.lbl2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbl1
+            // lbl3
             // 
-            this.lbl1.Font = new System.Drawing.Font("Franklin Gothic Heavy", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.Location = new System.Drawing.Point(0, 0);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(96, 75);
-            this.lbl1.TabIndex = 5;
-            this.lbl1.Text = "B";
-            this.lbl1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl3.Font = new System.Drawing.Font("Franklin Gothic Heavy", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl3.Location = new System.Drawing.Point(192, 0);
+            this.lbl3.Name = "lbl3";
+            this.lbl3.Size = new System.Drawing.Size(96, 75);
+            this.lbl3.TabIndex = 7;
+            this.lbl3.Text = "N";
+            this.lbl3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl4
+            // 
+            this.lbl4.Font = new System.Drawing.Font("Franklin Gothic Heavy", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl4.Location = new System.Drawing.Point(288, 0);
+            this.lbl4.Name = "lbl4";
+            this.lbl4.Size = new System.Drawing.Size(96, 75);
+            this.lbl4.TabIndex = 8;
+            this.lbl4.Text = "G";
+            this.lbl4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl5
+            // 
+            this.lbl5.Font = new System.Drawing.Font("Franklin Gothic Heavy", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl5.Location = new System.Drawing.Point(384, 0);
+            this.lbl5.Name = "lbl5";
+            this.lbl5.Size = new System.Drawing.Size(96, 75);
+            this.lbl5.TabIndex = 9;
+            this.lbl5.Text = "O";
+            this.lbl5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlLetters
             // 
@@ -110,14 +110,12 @@
             // 
             // SimpleCard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.Controls.Add(this.pnlGame);
             this.Controls.Add(this.pnlLetters);
             this.Name = "SimpleCard";
             this.Size = new System.Drawing.Size(500, 590);
-            this.Load += new System.EventHandler(this.SimpleCard_Load);
+            this.Resize += new System.EventHandler(this.SimpleCard_Load);
             this.pnlLetters.ResumeLayout(false);
             this.ResumeLayout(false);
 
