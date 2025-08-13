@@ -23,10 +23,16 @@ namespace Bingo2._0
         private void Form1_Load(object sender, EventArgs e)
         {
             AmericanCard c1 = new AmericanCard();
-            AmericanCard c2 = new AmericanCard();
             this.Controls.Add(c1);
-            c2.Location = new Point(c1.Location.X + c1.Width + 5, 0);
+            AmericanCard c2 = new AmericanCard();
             this.Controls.Add(c2);
+            c2.Location = new Point(c1.Location.X + c1.Width + 5, 0);
+            c2.Size = new Size(700, 790);
+        }
+
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Escape) Application.Exit();
         }
     }
 }

@@ -41,7 +41,7 @@ namespace Bingo2._0
 
         private void SimpleCell_Load(object sender, EventArgs e)
         {
-            if (this.Parent?.Size != new Size(480, 500)) return;
+            if (this.Parent?.Size == new Size(480, 500)) return;
 
             this.Size = new Size(this.Parent.Width / 5, this.Parent.Height / 5);
         }

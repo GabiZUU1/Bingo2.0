@@ -60,12 +60,6 @@
     <Compile Include="SimpleCard.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="SimpleCard.Designer.cs">
-      <DependentUpon>SimpleCard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SimpleCard2.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="SimpleCell.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -84,9 +78,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SimpleCard.resx">
-      <DependentUpon>SimpleCard.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SimpleCell.resx">
       <DependentUpon>SimpleCell.cs</DependentUpon>
     </EmbeddedResource>

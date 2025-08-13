@@ -93,7 +93,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "SimpleCell";
             this.Size = new System.Drawing.Size(96, 100);
-            this.Resize += new System.EventHandler(this.SimpleCell_Load);
+            this.Load += new System.EventHandler(this.SimpleCell_Load);
             this.ResumeLayout(false);
 
         }
