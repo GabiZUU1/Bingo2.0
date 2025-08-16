@@ -28,6 +28,7 @@ namespace Bingo2._0
                 {
                     Cells[i,j] = new SimpleCell();
                     SimpleCell c = Cells[i, j];
+                    this.pnlGame.Controls.Add(c);
                     c.Location = new Point(i * c.Width, j * c.Height);
 
                     if (i == 2 && j == 2)
@@ -45,7 +46,6 @@ namespace Bingo2._0
                         c.Content = n;
                     }
 
-                    this.pnlGame.Controls.Add(c);
                 }
             }
         }

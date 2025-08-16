@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Runtime.InteropServices;
 
 namespace Bingo2._0
 {
@@ -20,11 +21,9 @@ namespace Bingo2._0
         private Label lbl5;
         #endregion
 
-        private readonly Size DefSize = new Size(500, 590);
-
         public SimpleCard()
         {
-            this.Size = DefSize;
+            this.Size = new Size(500, 590);
             this.BackColor = Color.AntiqueWhite;
 
             pnlLetters = new Panel();
@@ -43,7 +42,7 @@ namespace Bingo2._0
             lbl2 = new Label();
             lbl2.Text = "I";
             lbl2.Location = new Point(lbl1.Location.X + lbl1.Width, 0);
-            
+
             lbl3 = new Label();
             lbl3.Text = "N";
             lbl3.Location = new Point(lbl2.Location.X + lbl2.Width, 0);
@@ -74,18 +73,33 @@ namespace Bingo2._0
             base.OnResize(eventargs);
             if (this.Parent == null) return;
 
-            pnlLetters.Size = new Size(this.Width - 20, (int)(this.Height * (12.71/100)));
+            pnlLetters.Size = new Size(this.Width - 20, (int)(this.Height * (12.71 / 100)));
             pnlLetters.Location = new Point(10, 0);
 
             pnlGame.Size = new Size(this.Width - 20, (int)(this.Height * (84.74 / 100)));
             pnlGame.Location = new Point(10, pnlLetters.Location.Y + pnlLetters.Height + 3);
 
             int x = 0;
-            foreach(Label l in pnlLetters.Controls.OfType<Label>())
+            foreach (Label l in pnlLetters.Controls.OfType<Label>())
             {
                 l.Size = new Size(pnlLetters.Width / 5, pnlLetters.Height);
                 l.Location = new Point(x, 0);
                 x = x + pnlLetters.Width / 5;
+            }
+
+            int ind = 0;
+            if (this.pnlGame.Controls.OfType<SimpleCell>().Count() != 0)
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    for (int j = 0; j < 5; j++)
+                    {
+                        SimpleCell c = this.pnlGame.Controls.OfType<SimpleCell>().ToList()[ind];
+                        c.Size = new Size(this.pnlGame.Width / 5, this.pnlGame.Height / 5);
+                        c.Location = new Point(i * c.Width, j * c.Height);
+                        ind++;
+                    }
+                }
             }
         }
     }
